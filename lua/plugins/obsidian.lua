@@ -12,6 +12,10 @@ return {
     --   "BufReadPre path/to/my-vault/*.md",
     --   "BufNewFile path/to/my-vault/*.md",
     -- },
+    keys = {
+      { "<leader>od", ":ObsidianToday<cr>", desc = "Dailiy note" },
+      { "<leader>oo", ":ObsidianSearch<cr>", desc = "Search notes" },
+    },
     dependencies = {
       -- Required.
       "nvim-lua/plenary.nvim",
@@ -51,5 +55,16 @@ return {
   },
   {
     "ixru/nvim-markdown",
+  },
+  {
+    "folke/which-key.nvim",
+    opts = function(_, opts)
+      local spec = opts.spec or {}
+      table.insert(spec, {
+        { "<leader>o", group = "Obsidian", icon = { icon = "󰇈", color = "purple" } },
+      })
+
+      opts.spec = spec
+    end,
   },
 }

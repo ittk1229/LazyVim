@@ -67,4 +67,8 @@ return {
       opts.spec = spec
     end,
   },
+  {
+    "3rd/image.nvim",
+    opts = {},
+  },
 }

@@ -23,4 +23,8 @@ return {
       return opts
     end,
   },
+  {
+    "folke/snacks.nvim",
+    keys = { { "<leader>sns", ":lua Snacks.notifier.show_history()<cr>", desc = "Show snack history" } },
+  },
 }

@@ -10,4 +10,14 @@ return {
       },
     },
   },
+  {
+    "marko-cerovac/material.nvim",
+  },
+  -- Set default colorscheme
+  {
+    "LazyVim/LazyVim",
+    opts = {
+      colorscheme = "material-oceanic",
+    },
+  },
 }

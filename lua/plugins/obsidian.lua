@@ -50,6 +50,7 @@ return {
         -- vim.ui.open(url) -- need Neovim 0.10.0+
       end,
       open_app_foreground = true,
+      disable_frontmatter = true,
     },
   },
   {
